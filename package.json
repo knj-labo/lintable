@@ -5,8 +5,8 @@
   "packageManager": "pnpm@8.9.0",
   "type": "module",
   "scripts": {
-    "dev": "echo 'Development server not configured yet'",
-    "build": "echo 'Build process not configured yet'",
+    "dev": "vite --config extension/vite.config.ts",
+    "build": "vite build --config extension/vite.config.ts",
     "lint": "echo 'Linting not configured yet'",
     "test": "echo 'Tests not configured yet'"
   },
@@ -25,5 +25,15 @@
   "bugs": {
     "url": "https://github.com/knj-labo/lintable/issues"
   },
-  "homepage": "https://github.com/knj-labo/lintable#readme"
+  "homepage": "https://github.com/knj-labo/lintable#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.0.254",
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
+  },
+  "dependencies": {
+    "textlint": "^14.0.0",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1"
+  }
 }
