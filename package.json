@@ -1,0 +1,29 @@
+{
+  "name": "lintable",
+  "version": "0.0.1",
+  "description": "One command · One extension · Every page is lintable",
+  "packageManager": "pnpm@8.9.0",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Development server not configured yet'",
+    "build": "echo 'Build process not configured yet'",
+    "lint": "echo 'Linting not configured yet'",
+    "test": "echo 'Tests not configured yet'"
+  },
+  "keywords": [
+    "lint",
+    "linter",
+    "browser-extension",
+    "web-analysis"
+  ],
+  "author": "knj-labo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knj-labo/lintable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/knj-labo/lintable/issues"
+  },
+  "homepage": "https://github.com/knj-labo/lintable#readme"
+}

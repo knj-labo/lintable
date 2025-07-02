@@ -1,0 +1,7 @@
+# .mise.toml
+[tools]
+node = "20"
+pnpm = "8.9.0"
+
+[settings]
+experimental = true
