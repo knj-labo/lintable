@@ -144,3 +144,6 @@ vite.config.ts.timestamp-*
 # ai
 .claude
 CLAUDE.md
+
+# vendor
+vendor
