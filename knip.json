@@ -1,0 +1,13 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": ["ext/background.ts", "ext/content.ts", "api/index.ts"],
+  "project": ["ext/**/*.ts", "api/**/*.ts", "!ext/src/**/*.ts"],
+  "ignore": ["dist/**", "node_modules/**", "**/*.d.ts", ".wrangler/**", "ext/src/**"],
+  "ignoreExportsUsedInFile": true,
+  "vite": {
+    "config": "vite.config.ts"
+  },
+  "typescript": {
+    "config": "tsconfig.json"
+  }
+}

@@ -143,3 +143,27 @@ vite.config.ts.timestamp-*
 
 # ai
 .claude
+
+# Cloudflare Wrangler
+.wrangler/
+
+# Serena MCP tool
+.serena/
+
+# Build artifacts
+ext/dist/
+build-dev.sh
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Backup files from refactoring
+*.backup

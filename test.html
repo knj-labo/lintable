@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lintable テストページ</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+        }
+        .test-section {
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .test-text {
+            background: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lintable テストページ</h1>
+    
+    <div class="test-section">
+        <h2>テスト1: です・である混在</h2>
+        <div class="test-text">
+            これはテストです。
+            これはテストである。
+            文体が混在しています。
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>テスト2: 長い文章</h2>
+        <div class="test-text">
+            とても長い文章がここに書かれていて、一文が長すぎるという警告が出るはずの文章です。これは50文字を超える長い文章の例で、技術文書では避けるべきとされています。
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>テスト3: 正しい文章</h2>
+        <div class="test-text">
+            これは正しい文章です。
+            文体も統一されています。
+            文の長さも適切です。
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>使い方</h2>
+        <ol>
+            <li>テキストを選択する</li>
+            <li>右下の紫色のボタンをクリック、または右クリック→「Lintableで校正」</li>
+            <li>右側のパネルで校正結果を確認</li>
+            <li>レベルセレクターでL0〜L3を切り替え</li>
+        </ol>
+    </div>
+
+    <script>
+        // ページ読み込み後にメッセージを表示
+        window.addEventListener('load', () => {
+            console.log('テストページが読み込まれました');
+        });
+    </script>
+</body>
+</html>

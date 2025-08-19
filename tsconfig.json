@@ -2,20 +2,21 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "WebWorker"],
+    "jsx": "react-jsx",
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
+    "types": ["chrome", "@cloudflare/workers-types"],
     "paths": {
-      "@tle/*": ["./vendor/textlint-editor/packages/*"]
+      "@/*": ["./ext/*"]
     }
   },
-  "include": ["extension/**/*.ts"]
+  "include": ["ext/**/*", "api/**/*", "vite.config.ts"],
+  "exclude": ["node_modules", "dist"]
 }

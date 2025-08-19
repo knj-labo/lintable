@@ -1,0 +1,25 @@
+name = "lintable-api"
+main = "src/index.ts"
+compatibility_date = "2023-12-18"
+
+[env.production]
+name = "lintable-api-prod"
+
+[[kv_namespaces]]
+binding = "LINTABLE_KV"
+id = "your-kv-namespace-id"
+preview_id = "your-kv-preview-id"
+
+# Uncomment if using D1
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "lintable-db"
+# database_id = "your-database-id"
+
+[build]
+command = ""
+watch_paths = ["src/**/*.ts"]
+
+[dev]
+port = 8787
+local_protocol = "http"

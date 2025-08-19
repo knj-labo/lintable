@@ -2,19 +2,51 @@
   "name": "lintable",
   "version": "0.0.1",
   "description": "One command · One extension · Every page is lintable",
-  "packageManager": "pnpm@8.9.0",
+  "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --config extension/vite.config.ts",
-    "build": "vite build --config extension/vite.config.ts",
-    "lint": "echo 'Linting not configured yet'",
-    "test": "echo 'Tests not configured yet'"
+    "dev": "vite --mode development",
+    "dev:watch": "vite build --watch --mode development",
+    "build": "vite build --mode production",
+    "build:ext": "vite build",
+    "preview": "vite preview",
+    "dev:api": "wrangler dev api/index.ts",
+    "deploy:api": "wrangler deploy api/index.ts",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "knip": "knip",
+    "knip:fix": "knip --fix",
+    "knip:production": "knip --production",
+    "knip:dependencies": "knip --dependencies"
+  },
+  "dependencies": {
+    "@proofdict/textlint-rule-proofdict": "^3.1.2",
+    "@textlint/kernel": "^14.0.0",
+    "hono": "^3.11.0",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.5.3",
+    "@cloudflare/workers-types": "^4.0.0",
+    "@crxjs/vite-plugin": "^2.0.0-beta.23",
+    "@types/chrome": "^0.0.254",
+    "knip": "^5.62.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "wrangler": "^3.0.0"
   },
   "keywords": [
     "lint",
     "linter",
     "browser-extension",
-    "web-analysis"
+    "web-analysis",
+    "textlint",
+    "proofdict",
+    "cloudflare-workers"
   ],
   "author": "knj-labo",
   "license": "MIT",
@@ -25,15 +57,5 @@
   "bugs": {
     "url": "https://github.com/knj-labo/lintable/issues"
   },
-  "homepage": "https://github.com/knj-labo/lintable#readme",
-  "devDependencies": {
-    "@types/chrome": "^0.0.254",
-    "@types/node": "^20.10.5",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.10"
-  },
-  "dependencies": {
-    "textlint": "^14.0.0",
-    "textlint-rule-preset-ja-technical-writing": "^10.0.1"
-  }
+  "homepage": "https://github.com/knj-labo/lintable#readme"
 }
