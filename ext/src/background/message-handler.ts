@@ -1,4 +1,5 @@
 import { CONTEXT_MENU_IDS } from '../shared/constants';
+import { createLogger } from '../shared/logger';
 import {
   type ChromeMessage,
   ErrorCode,
@@ -7,7 +8,6 @@ import {
   type UserConfig,
   createLintableError,
 } from '../shared/types';
-import { createLogger } from '../shared/utils/logger';
 import { getTextlintService } from './textlint-service';
 
 const logger = createLogger('MessageHandler');

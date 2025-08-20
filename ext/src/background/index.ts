@@ -1,6 +1,6 @@
 import { CONTEXT_MENU_IDS, EXTENSION_NAME } from '../shared/constants';
+import { createLogger } from '../shared/logger';
 import type { ChromeMessage } from '../shared/types';
-import { createLogger } from '../shared/utils/logger';
 import { getMessageHandler } from './message-handler';
 import { getTextlintService } from './textlint-service';
 

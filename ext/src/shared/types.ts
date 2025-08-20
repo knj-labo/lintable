@@ -100,30 +100,6 @@ export interface UserConfig {
   customRules?: Record<string, unknown>;
 }
 
-export const DEFAULT_CONFIG: UserConfig = {
-  theme: 'auto',
-  defaultRuleLevel: 'L1',
-  autoLint: false,
-  debounceDelay: 500,
-  maxResults: 100,
-  enableNotifications: true,
-};
-
-// UI Types
-export interface OverlayState {
-  isOpen: boolean;
-  results: LintResult[];
-  currentLevel: RuleLevel;
-  isLoading: boolean;
-  error?: string;
-}
-
-export interface ButtonState {
-  isVisible: boolean;
-  hasErrors: boolean;
-  badge?: string | number;
-}
-
 // Error Types
 export interface LintableError extends Error {
   code: string;
@@ -144,20 +120,6 @@ export function createLintableError(
 
 export enum ErrorCode {
   LINT_FAILED = 'LINT_FAILED',
-  WORKER_ERROR = 'WORKER_ERROR',
   MESSAGE_ERROR = 'MESSAGE_ERROR',
   CONFIG_ERROR = 'CONFIG_ERROR',
-  NETWORK_ERROR = 'NETWORK_ERROR',
-  UNKNOWN_ERROR = 'UNKNOWN_ERROR',
 }
-
-// Utility Types
-export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
-};
-
-export type AsyncReturnType<T extends (...args: unknown[]) => Promise<unknown>> = T extends (
-  ...args: unknown[]
-) => Promise<infer R>
-  ? R
-  : never;

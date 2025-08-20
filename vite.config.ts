@@ -8,7 +8,7 @@ const manifest = {
   version: '0.0.1',
   description: 'One command · One extension · Every page is lintable',
   background: {
-    service_worker: 'background.ts',
+    service_worker: 'src/background/index.ts',
     type: 'module',
   },
   content_scripts: [

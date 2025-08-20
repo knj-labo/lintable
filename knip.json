@@ -1,8 +1,8 @@
 {
   "$schema": "https://unpkg.com/knip@5/schema.json",
-  "entry": ["ext/background.ts", "ext/content.ts", "api/index.ts"],
-  "project": ["ext/**/*.ts", "api/**/*.ts", "!ext/src/**/*.ts"],
-  "ignore": ["dist/**", "node_modules/**", "**/*.d.ts", ".wrangler/**", "ext/src/**"],
+  "entry": ["ext/src/background/index.ts", "ext/content.ts", "ext/overlay.ts", "api/index.ts"],
+  "project": ["ext/**/*.ts", "ext/src/**/*.ts", "api/**/*.ts"],
+  "ignore": ["dist/**", "node_modules/**", "**/*.d.ts", ".wrangler/**", "ext/background.ts"],
   "ignoreExportsUsedInFile": true,
   "vite": {
     "config": "vite.config.ts"

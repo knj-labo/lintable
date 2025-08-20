@@ -1,4 +1,4 @@
-import { LIMITS, TIMING } from '../constants';
+import { LIMITS, TIMING } from './constants';
 
 interface CacheEntry<T> {
   data: T;

@@ -1,9 +1,9 @@
 import proofdictRule from '@proofdict/textlint-rule-proofdict';
 import { TextlintKernel } from '@textlint/kernel';
 import jaPreset from 'textlint-rule-preset-ja-technical-writing';
+import { createLRUCache, createLintCacheKey } from '../shared/cache';
+import { createLogger } from '../shared/logger';
 import type { LintOptions, LintResult, RuleLevel } from '../shared/types';
-import { createLRUCache, createLintCacheKey } from '../shared/utils/cache';
-import { createLogger } from '../shared/utils/logger';
 
 const logger = createLogger('TextlintService');
 
